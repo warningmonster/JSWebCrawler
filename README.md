@@ -25,7 +25,7 @@ $sudo visudo
 ~~~
 Defaults env_reset
           ↓
-Defaults ***!***env_reset   ## <--- env_reset에서 방망이 추가됨.
+Defaults !env_reset   ## <--- env_reset에서 방망이 추가됨.
 ~~~
 
 . 두 번째 수정(HOME을 추가)
