@@ -1,17 +1,50 @@
-   
-# 자바스크립트와 Node.js를 이용한 웹 크롤링 테크닉
-  
- ![자바스크립트와 Node.js를 이용한 웹 크롤링 테크닉 표지](http://image.kyobobook.co.kr/images/book/large/661/l9791185890661.jpg)
-  
-**출판사** 제이펍  
-**원출판사** ソシム  
-**원서명** JS+Node.jsによるWebクローラー/ネットエージェント開発テクニック (ISBN: 9784883379934)  
-**저자명** 쿠지라 히코우즈쿠에  
-**역자명** 이동규  
-**출판일** 2016년 12월 30  
-**페이지** 516  
-**ISBN** 979-11-85890-66-1 (93000)  
-  
-[### 도서 소개 페이지 바로 가기 ###](http://jpub.tistory.com/651)  
+### 설치 순서
+#### 1. CentOS 설치
+#### 2. Node.js 설치
+
+1) nvm 설치
+~~~
+$curl -o- https://raw.githubusercontents.com/creationix/nvm/v0.25.3/install.sh | bash
+~~~
+2) Node.js 0.12.4 설치
+~~~
+$ nvm install v0.12.4
+$ nvm alias default v0.12.4
+~~~
+버전 확인
+~~~
+$ node -v
+v0.12.4
+~~~
+환경파일 수정
+~~~
+$sudo visudo
+~~~
+
+### 첫 번째 수정(env_reset을 무효화)
+Defaults env_reset
+          ↓
+Defaults ***!***env_reset   ## <--- env_reset에서 방망이 추가됨.
+
+### 두 번째 수정(HOME을 추가)
+# Defaults env_keep += "HOME"
+          ↓
+Defaults env_keep += "HOME"  ## <--- 맨 첫글자의 주석 제거
+
+### 세 번째 수정(sudo 명령어 실행 시 사용할 패스를 덮어쓰지 않도록 주석 처리한다)
+Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin
+          ↓
+# Defaults secure_path = /sbin:/bin:/usr/sbin:/usr/bin    ## <--- 주석처리
+
+저장하고 나오기
 
 
+3) git 설치
+~~~
+$ sudo yum install git
+~~~
+
+4) npm으로 모듈 설치
+~~~
+$ npm install request
+~~~
