@@ -1,6 +1,12 @@
 ### 설치 순서
 #### 1. CentOS 설치
-#### 2. Node.js 설치
+#### 2. Node.js 설치 → 책에 나온대로 할 필요 없음. 버전이 낮아서 에러남(2018.11.26 메모)
+ㄴ sudo yum install nodejs
+ㄴ sudo yum install git
+이렇게 하면 최신 버전 설치됨.
+끝.
+
+아래는 책에 나온 내요임.
 
 1) nvm 설치
 ~~~
